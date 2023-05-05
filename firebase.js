@@ -7,13 +7,13 @@ import "firebase/compat/firestore";
 import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
-// const firebaseConfig = {
-  
-// };
+const firebaseConfig = {
+  // Your web app's Firebase configuration
+};
 
 // Initialize Firebase
-// step - 3
-
-
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
 // Initialize Cloud Firestore and get a reference to the service
-//step - 4
+const db = getFirestore(app);
+export { db, auth };
